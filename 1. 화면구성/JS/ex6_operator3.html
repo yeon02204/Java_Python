@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator3</title>
+</head>
+<body>
+    
+<script>
+    // 전위증감
+    // 앞에 붙으면 : 증가 시키고 값이 사용됨
+    let x = 10;
+    let result = ++x;
+    console.log(result); // 11
+    // 후위증감
+    // 뒤에 붙으면 : 사용하고 값이 증가됨
+    let y = 10;
+    let result2 = y++;
+    console.log(result2); // 10
+
+    x = 3, y = 3;
+    let z = x++ + ++y;
+    // 모든 연산을 마치고 출력하려고 할 때
+    console.log(`x : ${x}, y : ${y}, z : ${z}`);
+    // x: 4
+    // y: 4
+    // z: 7
+</script>
+</body>
+</html>

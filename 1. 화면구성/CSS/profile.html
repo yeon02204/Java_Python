@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile/but</title>
+    <style>
+        /* 프로필 예제 */
+        h2 {
+            text-align: center;
+        }
+
+        .profile {
+            border: 1px solid silver;
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .profile--vip {
+            border: 1px solid brown;
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+            background-color: gold;
+            margin: 20px;
+
+        }
+
+        .profile__name {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .profile__email {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 버튼 css */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8xp;
+            /*아이콘과 텍스트 사이 간격*/
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            transition: opacity 0.2s;
+
+        }
+
+        .container{
+            padding: 20px;
+            text-align: center;
+        }
+        .btn__text{
+            font-weight: 500;
+        }
+        .btn--success{
+            background-color: #2ecc71;
+        }
+        .btn--disabled{
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        .btn:not(.btn--disabled):hover{
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>BEM프로필 예제</h2>
+    <div class="profile">
+        <div class="profile__name">이름 : 홍길동</div>
+        <div class="profile__email">이메일 : gildong@naver,.com</div>
+    </div>
+    <div class="profile--vip">
+        <div class="profile__name">이름 : 김철수</div>
+        <div class="profile__email">이메일 : chulsoo@naver.com</div>
+    </div>
+    <!-- 프로파일 예제 -->
+
+
+    <h2>BEM 버튼 컴포넌트 예제</h2>
+    <div>
+        <!-- 성공 버튼 -->
+        <div class="container">
+            <button class="btn--success">
+                <span class="btn__text">확인</span>
+            </button>
+            <!-- 비활성화 버튼 -->
+            <button class="btn--disabled">
+                <span class="btn__text">비활성</span>
+            </button>
+        </div>
+
+    </div>
+    <!-- 버튼 예제 -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reset</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <style>
+        body {
+          font-family: "Segoe UI", sans-serif;
+          background-color: #f7f7f7;
+          color: #2c3e50;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #2980b9;
+        }
+    
+        p {
+          background-color: #ecf0f1;
+          padding: 10px;
+          border-radius: 6px;
+        }
+    
+        ul {
+          background-color: #dff9fb;
+          border: 1px solid #74b9ff;
+          padding: 10px;
+          border-radius: 4px;
+        }
+    
+        table {
+          border: 1px solid #95a5a6;
+          border-collapse: collapse;
+          width: 100%;
+        }
+    
+        th, td {
+          border: 1px solid #bdc3c7;
+          padding: 8px;
+          text-align: left;
+        }
+    
+        th {
+          background-color: #74b9ff33;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <h1>Normalize.css 적용 실습</h1>
+      <p>
+        이 예제는 normalize.css를 적용했을 때 브라우저 기본 스타일이 어떻게 ‘정돈’되는지를 보여준다.<br>
+        위의 `<link>` 부분을 주석 처리하면, 각 브라우저별 기본 여백·폰트·표 스타일 차이를 볼 수 있다.
+      </p>
+    
+      <h2>리스트 비교</h2>
+      <ul>
+        <li>HTML 기본 리스트 스타일</li>
+        <li>normalize.css 적용 시 브라우저별 일관된 출력</li>
+        <li>Reset과 달리 여백은 완전히 제거되지 않음</li>
+      </ul>
+    
+      <h2>테이블 비교</h2>
+      <table>
+        <tr><th>이름</th><th>점수</th></tr>
+        <tr><td>홍길동</td><td>95</td></tr>
+        <tr><td>이몽룡</td><td>88</td></tr>
+      </table>
+    
+    </body>
+</html>

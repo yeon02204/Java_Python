@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo</title>
+    <style>
+        a:link {
+            color: #3498db;
+        }
+
+        a:visited {
+            color: #9b59b6;
+        }
+
+        a:hover {
+            color: #e67e22;
+            text-decoration: underline;
+        }
+
+        input[type="checkbox"]:checked+label{
+            background-color: beige;
+            font-weight: 600;
+        }
+        ul li:first-child{
+            font-weight: 700;
+        }
+        ul li:nth-child{
+            color: #e74c3c;
+        }
+
+        p:not(.notice){
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>간단실습</h1>
+    <h2>1)링크 상태</h2>
+    <a href="#">예시링크</a>
+    <br><br>
+    <h2>2)체크박스 + label</h2>
+    <input type="checkbox" id=chk1>
+    <label for="chk1">약관에 동의합니다</label>
+    <br><br>
+    <h2>3)리스트 선택</h2>
+    <ul>
+        <li>첫번째 항목</li>
+        <li>두번째 항목</li>
+        <li>세번째 항목</li>
+    </ul>
+    <br><br>
+    <h2>4)문단 색상</h2>
+    <p>이 문단은 회색이다</p>
+    <p class="notice">이 문단은 .notice라서 기본 색상이다</p>
+</body>
+
+</html>

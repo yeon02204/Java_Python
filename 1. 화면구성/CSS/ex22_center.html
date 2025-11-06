@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>center</title>
+    <style>
+    .item{
+        width:  200px;
+        height: 200px;
+        text-align: center;
+        border: 2px solid black;
+    }
+    .container{
+        /*자식속성을 좌 -> 우 정렬(기본값)*/
+        display: flex;
+        /*주 축을 기준으로 어느쪽으로 정렬을 할것인지
+        center : 중앙정렬 */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    body{
+        border: 1px solid black;
+        height: 100vh;
+        padding: 30px;
+    }
+    
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">자식요소</div>
+
+
+</body>
+</html>

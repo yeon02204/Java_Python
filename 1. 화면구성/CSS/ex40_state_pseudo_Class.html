@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>state_pseudo_class</title>
+    <style>
+        /* 입력이 가능한 input 테그에 배경색을 줘라 */
+        input:enabled{
+            background-color: #ecf0f1;
+        }
+        /* 입력이 안되는 input 테그에 배경색을 줘라 */
+        input:disabled{
+            background-color: #bdc8c7;
+        }
+        /* 체크된 input 태그와 형제인 label에게 배경색을 노란색으로 폰트를 두껍게 바꿔라 */
+        input:checked+label{
+            background-color: lightgoldenrodyellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>상태 의사 클래스</h2>
+    <input type="checkbox" id = "chk1">
+    <!-- for 속성으로 체크박스를 위한 라벨임을 알려줌 -->
+    <label for="chk1">동의합니다</label>
+    <br>
+    <input type="checkbox" id = "chk2">
+    <label for="chk2">동의하지 않습니다</label>
+    <br><br>
+
+    <input type="text" placeholder="입력가능">
+    <!-- value : 실제 input 태그에 들어가는 값 -->
+    <input disabled value="비활성화 됨">
+    <br><br>
+    
+
+</body>
+</html>

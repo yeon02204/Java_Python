@@ -1,0 +1,36 @@
+.box{
+    width: 100px;
+    /* height: 100px; */
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    margin: 10px;
+}
+.a{
+    background-color: lightpink;
+}
+.b{
+    background-color: lightyellow;
+}
+.c{
+    background-color: lightskyblue;
+}
+.d{
+    background-color: lightgreen;
+}
+.e{
+    background-color: lightcyan;
+}
+.f{
+    background-color: lavender;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed #000;
+    width: 100%;
+    /* max-width: 600px; */
+    height: 300px;
+    margin-bottom: 20px;
+}

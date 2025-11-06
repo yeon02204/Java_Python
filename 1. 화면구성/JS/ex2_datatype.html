@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatype</title>
+    <script>
+        // Number(숫자)
+        let num1 = 10; //정수
+        let num2 = 3.14; //실수
+        console.log("num1 : " + num1);
+        console.log("num2 : " + num2);
+
+        console.log("num1의 타입 : " + typeof num1) //number
+        console.log("num2의 타입 : " + typeof num2) //number
+
+        // NaN(Not a Number)
+        // 숫자 타입 이지만 유효한 수가 아닐때 생기는 특수 값이다.
+
+        // NaN이 생기는 경우
+        // 정수를 0으로 나눌때
+        // 숫자로 해석 불가능한 문자열을 수학연산 하려 할때
+        console.log(Number("abc")); //NaN
+
+        // NaN의 타입
+        console.log("NaN의 타입 : " + typeof NaN); //number
+
+        // Infinity : 양의 무한대를 나타내는 숫자 타입의 특수값
+        console.log("Infinity의 타입 :" + typeof Infinity) //number
+
+        // -Infinity : 음의 무한대를 나타내는 숫자 타입의 특수값
+        console.log("-Infinity의 타입 :" + typeof -Infinity) //number
+
+        // string(문자열)
+        // 홑따옴표나 쌍따옴표 안에 들어있는 내용
+        let str1 = "hello";
+        let str2 = "JavaScript";
+        let name = "홍길동";
+        let msg = `안녕하세요 ${name}`;
+        console.log("str1 : " + str1); // hello
+        console.log("str2 : " + str2); // JavaScript
+        console.log("msg : " + msg); // 안녕하세요 홍길동
+
+        // boolean
+        // 참과 거짓을 데이터로 표햔
+        // 참 : true
+        // 거짓 : false
+        let isAdult = true;
+        let isMinor = false;
+        console.log("True의 타입" + typeof true); // boolean
+
+        // undefined
+        // 변수에 값을 넣지 않았다.
+        let x;
+        console.log(x); // undefined
+
+        // null
+        // 의도적으로 비어있음
+        let selected = null;
+        console.log(slelectrd) // null
+
+        // bigint
+        // 매우 큰 정수를 안전하게 표현할떄 사용
+        let a = 9007199254740991;
+        console.log(a + 1); // 9007199254740992 (잘 출력됨)
+        console.log(a + 2); // 9007199254740992 (정확도가 떨어짐)
+        // number는 최대 정확도가 존재한다.
+        // bignit는 오차없이 매우 큰 정수를 정확히 표현할 수 있다
+
+        // bignit로 선언하는 방법 : 숫자뒤에 n 붙이기
+        let b = 9007199254740991n;
+        console.log(b + 2); // 9007199254740993 (잘 나옴 BUT. 같은 타입으로 연산해야함)
+
+        //symbol
+        // 고유한 식별자를 만들때 쓰는 특별한 원시값이다
+        // 괄호안에 들어가는것은 특별한 의미는 없음
+        // 주석같은 개념이라고 보면 됨
+        const k1 = Symbol('id');
+        const k2 = Symbol('id');
+
+        console.log(typeof k1); // symbol
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

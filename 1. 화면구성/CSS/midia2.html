@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>midia2</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+            background-color: lightpink;
+            flex: 1;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        .container{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        /*  태블릿 이상: 2열 가로 레이아웃으로 변경 */
+        @media(min-width :768px){
+            .container{
+                flex-direction: row; /* 가로 정렬 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">박스1</div>
+        <div class="box">박스2</div>
+    </div>
+</body>
+</html>

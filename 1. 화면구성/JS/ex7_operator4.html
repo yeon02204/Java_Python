@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator4</title>
+</head>
+
+<body>
+    <script>
+        let a = 10;
+        let b = 5;
+
+        let greater = a > b; // true
+        let less = a < b; // false
+        let equal = a == b;ç
+        let notequal = a != b; // true
+        let greaterequal = a >= 10; //true
+        let lessequal = b <= 5;// true
+
+        // ==과 ===의 차이
+        // == : 값만 비교
+        // === : 값과 타입을 비교
+
+        let x = 5;
+        let y = "5";
+
+        let result = (x == y); // false
+        result = (x === y); // false
+        result = (x != y); // false
+        result = (x !== y); //true
+
+        let str1 = "apple";
+        let str2 = "banana";
+        // 문자열 끼리는 사전 순서대로 비교
+        result = str1 < str2;
+        console.log(result); // true
+
+    </script>
+</body>
+
+</html>

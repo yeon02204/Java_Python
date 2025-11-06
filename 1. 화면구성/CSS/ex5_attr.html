@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr</title>
+<style>
+    [class = "p1"]{
+        color: red;
+    }
+    [class = "p2"]{
+        color: blue;
+    }
+</style>
+</head>
+<body>
+    <p class="p1">속성선택자 실습중</p>
+    <p class="p2">속성선택자 실습중</p>
+    <p id="p3">속성선택자 실습중</p>
+    <div class="d1">속성선택자 실습중</div>
+
+    <button id="b1">버튼</button>
+    <script>
+        const p = document.querySelector("p[class ='p1']")
+        let btn = document.querySelector("button[id = 'd1']")
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>other_pseudo_class</title>
+    <style>
+        /* p테그 이면서  highlight클래스 값을 가지고 있지 않은 태그*/
+        p:not(.highlight){
+            color: #7f8c8d;
+        }
+        p:lang(en){
+            font-style: italic;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h2>기타 의사 클래스</h2>
+    <p>이 문장은 기본 스타일 입니다</p>
+    <p class="highlight">이 문장은 강조 문장입니다.</p>
+    <p lang="en">This is an English sentence</p>
+</body>
+</html>

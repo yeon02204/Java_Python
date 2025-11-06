@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>BEM 기본 예제</title>
+<style>
+  /* Block */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    width: 250px;
+    margin: 20px auto;
+    font-family: sans-serif;
+  }
+
+  /* Element */
+  .card__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card__content {
+    color: #555;
+  }
+
+  /* Modifier */
+  .card--highlight {
+    background-color: #fef5e7;
+    border-color: #f39c12;
+  }
+</style>
+</head>
+<body>
+  <div class="card card--highlight">
+    <div class="card__title">공지사항</div>
+    <div class="card__content">다음 주 휴강합니다.</div>
+  </div>
+</body>
+</html>

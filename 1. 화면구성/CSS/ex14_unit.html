@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unit</title>
+    <style>
+        div{
+            background: #74b9ff;
+            color: white;
+            margin-bottom: 10px;
+            padding:  10px;
+        }
+        .box-px{
+            width : 200px
+        }
+        /* 부모의 크기를 따라감
+        바디의 기본 크기 16
+        10em -> 16 * 10*/
+        .box-em{
+            width : 10em    
+        }
+        /*root의 크기를따라감
+        body의 font-size * 40
+        rem을 많은 곳에서 사용한다면 일괄적으로 변경이 가능하다*/
+        .box-rem{
+            width : 40rem
+        }
+        .box-percent{
+            width : 50%
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-px">width : 200px</div>
+    <div class="box-em">width : 10em</div>
+    <div class="box-rem">width : 10rem</div>
+    <div class="box-percent">width : 50%</div>
+</body>
+</html>

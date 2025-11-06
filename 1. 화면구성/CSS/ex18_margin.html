@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+        /*
+        너비가 200px
+        높이가 80px
+        배경색이 #0984e3
+        글씨색이 흰색
+        줄 간격이 80px
+        테두리 둥글게 8px
+        박스 그림자 0 0 5px rgba(0,0,0,0.2)*/
+        div{
+            width: 200px;
+            height: 80px;
+            color: white;
+            background: #0984e3;
+            line-height: 80px;
+            margin: 40px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);            
+        }
+        h2{
+            text-align: center;
+        }
+        .box-top{
+            margin-top: 60px;
+        }
+        .box-right{
+            margin-right: 100px;
+        }
+        /*margin값이 겹칠때는 더큰 값이 적용 됨*/
+        .box-bottom{
+            margin-bottom: 100px;
+        }
+        .box-left{
+            margin-left: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>모든방향 margin 실습 예제</h2>
+    <div class="base-box box-top">margin-top : 60px</div>
+    <div class="base-box box-right">margin-right : 100px</div>
+    <div class="base-box box-bottom">margin-bottom : 60px</div>
+    <div class="base-box box-left">margin-left : 100px</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items</title>
+    <link href="/CSS/box.css" rel="stylesheet">
+    <style>
+        section{
+            align-items: baseline;
+        }
+        .box{ /*중앙 정렬하는 코드*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a{
+            font-size: 20px;
+            height: 100px;
+        }
+        .b{
+            font-size: 32px;
+            height: 70px;
+        }
+        .c{
+            font-size: 70px;
+            height: 200px;
+        }
+        .d{
+            font-size: 15px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>baseline</h2>
+    <section class="baseline">
+        <div class="box a">01</div>
+        <div class="box b">02</div>
+        <div class="box c">03</div>
+        <div class="box d">04</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align_self</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            border: 2px dashed black;
+            height: 200px;
+            padding: 10px;
+            gap: 10px;
+        }
+        .item{
+            width: 100px;
+            padding: 10px 0;
+            border: 2px solid black;
+            text-align: center;
+        }
+        .two{
+            align-self: flex-start;
+        }
+        .three{
+            align-self: flex-end;
+        }
+        .four{
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h2>align-self 실습</h2>
+    <div class="container">
+        <div class="item one">기본</div>
+        <div class="item two">flex-start</div>
+        <div class="item three">flex-end</div>
+        <div class="item four">stretch</div>
+    </div>
+</body>
+</html>

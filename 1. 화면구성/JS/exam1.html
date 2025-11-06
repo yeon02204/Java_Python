@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam</title>
+</head>
+
+<body>
+    <script>
+        // 1. 농구공이 25개가 있다.
+        // 한 박스에 4개씩 담을 수 있을 때 필요한 박스의 개수를 구하세요
+        let ball = 25; // 공 25개
+        let box = 0; // 박스의 갯수
+
+        // 공의 갯수가 4의 배수이면 남는 공이 없음
+        // 공의 갯수가 4의 배수가 아니면 남는 공이 있고 박스가 한개 더 필요함
+
+        box = (ball % 4 == 0) ? ball / 4 : parseInt(ball / 4) + 1;
+        console.log("박스의 갯수" + box + "개"); // 박스의 갯수 7개
+
+        // 2. 영화관에서 학생은 20% 할인, 일반인은 정가를 낸다.
+        //나이에 따라**할인된 티켓 가격**을 계산하시오
+
+         // 나이에 따라 티켓 가격이 출력되는 코드 작성하기
+        let age = 17;
+        let ticketPrice = 12000;
+
+       
+        ticketPrice = age > 19 ? ticketPrice  : ticketPrice * 0.8;
+        console.log(`${age}살의 티켓 가격은 ${ticketPrice}원 입니다.`) // 17살의 티켓 가격은 9600원 입니다.
+
+        // 3. 주문 금액이 30,000원 이상이거나**VIP 회원**이면 무료배송이다.
+        // 무료배송 여부를 **불리언 값** 으로 나타내시오
+
+        // 주문금액 : 28000
+        // vip : true
+
+        let orderPrice = 28000;
+        let isVip = true;
+
+        let isFree = orderPrice > 30000 || isVip == true ? "가능" : "불가능";
+        console.log(`무료배송이 ${isFree}합니다.`) // 무료배송이 가능합니다.
+
+        // 4. 현재 온도가 28도 이상이면 “에어컨 작동”, 18도 이하면 “난방 작동”, 그 사이면 “대기 상태”를 출력하는 프로그램을 작성하시오
+
+        let temperature = 23;
+
+        let mode = temperature >= 28 ? "에어컨 작동" : temperature <= 18 ? "난방작동" : "대기 상태";
+        console.log(mode); // 대기상태
+
+    </script>
+</body>
+
+</html>

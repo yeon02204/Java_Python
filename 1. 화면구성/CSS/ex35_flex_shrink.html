@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_shrink</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px dashed black;
+        }
+        .item{
+            width: 300px;
+            text-align: center;
+            padding: 20px 0;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        /* 줄어들지 않음 */
+        .a{
+            flex-shrink: 0;
+        }
+        /* 기본값 */
+        .b{
+            flex-shrink: 1;
+        }
+        /* 더 많이 줄어듬 */
+        .c{
+            flex-shrink: 3;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>flex_shrink 예제</h2>
+    <p> 창 크기를 줄여보면 각 박스의 축소 바율이 다르게 작동한다.</p>
+    <div class="container">
+        <div class="item a">1</div>
+        <div class="item b">2</div>
+        <div class="item c">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+    <link rel="icon" type="image/jpg" href="/images/rubber_duck_profile.jpg">
+    <style>
+        .container{
+            width: 100%; 
+             /* 화면 작을때 꽉차게 */
+            max-width: 1000px; 
+             /* 컨테이너 최대 너비 */
+            margin: 0 auto;
+            /* 가로 가운데 정렬 */
+            background-color: white;
+            /* 컨테이너 배경색 */
+            border: 1px solid white;
+            /* 테두리 두께, 색 */
+            height: 550px;
+            /* 높이 */
+            padding: 24px;
+            /* 안쪽여백 */
+            box-shadow:0 4px 12px rgba(0,0,0,0.5);
+            /* 컨테이너 그림자 */
+            border-radius: 8px;
+            /* 모서리 둥굴게 */
+            overflow: hidden; 
+            /* 안 넘치게 */
+        }
+        body{
+            background-color: silver;
+            /*배경색 */
+        }
+
+        .card{
+            width: 32%;
+            background-color: white;
+            border: 1px solid rgb(217, 217, 217);
+            /* height: 250px; */
+            padding: 12px;
+            margin: 10px;
+            border-radius: 8px;
+            position: relative;
+            bottom: 20px;
+        }
+        #flex{ /*카드 가로로 배치*/
+            display: flex;
+            /* 가운데 정렬 */
+            
+            justify-content: center;
+            /* 가운데 정렬 */
+        }
+        a{ /*홈 상품 문의*/
+            color: rgb(77, 185, 221);
+            text-decoration: none;
+            /*밑줄 제거 */
+            font-size: 15px;
+            padding: 8px;
+            position: relative;
+            /* 위치 자유 조정*/
+            bottom: 20px;
+            /* 위치 조정 */
+        }
+        .line{ /* 구분선 */
+            width: 100%;
+            background-color: rgb(212, 212, 212);
+            height: 1.5px;
+        }
+        h1{ /*스토어*/
+            text-indent: 5px;
+            letter-spacing: 5px;
+            font-family: "나눔고딕",NanumGothic,"돋움",Dotum;
+        }
+
+        h2{ /*상품목록*/
+            padding: 10px;
+            letter-spacing: 2px;
+            font-family: "나눔고딕",NanumGothic,"돋움",Dotum;
+            
+        }
+        h4{ /*상품 이름*/
+            font-family: "나눔고딕",NanumGothic,"돋움",Dotum;
+            margin: 10px 0 10px; /* 위아래 간격 좁게 */
+        }
+        #content{
+            color: rgb(122, 122, 122);
+            text-align: center;
+            font-size: 13px;
+            position: relative;
+            top: 20px;
+            /* 위치 조정 */
+        }
+        img{
+            width: 100%;
+        }
+        p{
+            color: rgb(106, 106, 106);
+            margin: 0 0 5px; /* 문단 아래 여백 살짝만 */
+            
+        }
+        button{
+            width: 80px;
+            height: 25px;
+            background-color: rgb(48, 148, 255);
+            border: 1px solid rgb(48, 148, 255);
+            color: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+            display: flex;              /* 내부를 세로 방향으로 정렬 */
+            flex-direction: column;     /* 세로로 쌓기 */
+            justify-content: center;    /* 가로 가운데 정렬 */
+            align-items: center;        /* 세로 가운데 정렬 */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <h1>스토어</h1>
+        <a href="#">홈</a>
+        <a href="#">상품</a>
+        <a href="#">문의</a>
+        <div class="line"></div>
+    </header>
+    <main>
+        <section> <!--상품목록 섹션-->
+            <h2>상품 목록</h2>
+            <div id="flex">
+                <div class="card">
+                    <img src="/images/key (1).jpg" alt="키보드 이미지">
+                    <h4>커세어 K70 PRO 게이밍 기계식 키보드</h4>
+                    <p>정연이가 쓰는 키보드이다.</p>
+                    <button>자세히 보기</button>
+                </div>
+                <div class="card">
+                    <img src="/images/MOS.jpg" alt="마우스 이미지">
+                    <h4>로지텍 LIFT VERTICAL 마우스</h4>
+                    <p>정연이가 쓰는 마우스이다.</p>
+                    <button>자세히 보기</button>
+                </div>
+                <div class="card">
+                    <img src="/images/air.jpg" alt="헤드셋 이미지">
+                    <h4>애플 에어팟 맥스</h4>
+                    <p>정연이가 쓰는 에어팟이다.</p>
+                    <button>자세히 보기</button>
+                </div>
+            </div>
+            <div class="line"></div>
+        </section> <!--main section-->
+    </main>
+    <footer id = "content">
+        &copy 2025 MyStore. 모든 권리 보유
+
+    </footer>
+</div> <!--container-->
+</body>
+</html>

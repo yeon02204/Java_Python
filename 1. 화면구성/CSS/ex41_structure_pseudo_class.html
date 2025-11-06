@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>structure_pseudo_class</title>
+    <style>
+        li:first-child{
+            font-weight: bold;
+            color: #2980b9;
+        }
+        /* 리스트 중에서 2번째 */
+        li:nth-child(2){
+        
+            color: #e74c3c;
+        }
+        p:first-of-type{
+            color: #16a085;
+        }
+        p:nth-of-type(2){
+            text-decoration: underline;
+        }
+        /* nth-child()와 nth-of-type()의 차이
+        nth-child() : 전체 자식중 2번째
+        nth-of-type() : 같은 태그(p, li)기준으로 2번째
+        */
+    </style>
+</head>
+<body>
+    <h2>구조 의사 클래스</h2>
+    <ul>
+        <li>첫번째 항목</li>
+        <li>두번째 항목</li>
+        <li>세번째 항목</li>
+    </ul>
+    <p>첫번째 문단</p>
+    <p>두번째 문단</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        body{
+            position: relative;
+            background: #bbb;
+            height: 100vh;
+            margin: 0;
+        }
+        .center-box{
+            position: absolute;
+            top : 50%;
+            left: 50%;
+            background: #fff;
+            padding: 30px 40px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            min-width: 200px;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <h1>로그인</h1>
+        <p>이 박스는 trnasform을 이용해서<br>화면 정확히 가운데 배치 되었다</p>
+    </div>
+</body>
+</html>

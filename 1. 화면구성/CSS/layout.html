@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            gap: 0;
+        }
+
+        .h1-1 {
+            background-color: pink;
+            width: 100%;
+
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightpink;
+            padding: 8px;
+            margin: 0;
+            width: 100%;
+        }
+
+        .flex {
+            display: flex;
+            gap: 8px;
+            padding: 15px;
+            background-color: rgb(235, 250, 255);
+            /* width: 100%; */
+        }
+
+        .a {
+            width: 100%;
+            padding:  0;
+            margin: 0 auto;
+
+        }
+
+        section {
+            width: 70%;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        aside {
+            width: 30%;
+            background-color: rgb(230, 230, 230);
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: lightyellow;
+            width: 100%;
+            padding: 12px;
+        }
+        .container{
+            width: 100%; 
+             /* 화면 작을때 꽉차게 */
+            margin: 0 auto;
+            /* 가로 가운데 정렬 */
+            background-color: white;
+            /* 컨테이너 배경색 */
+            /* border: 1px solid rgb(0, 0, 0); */
+            /* 테두리 두께, 색 */
+            padding: 0px;
+            /* 안쪽여백 */
+            overflow: hidden; 
+            /* 안 넘치게 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="box a">
+                <h1 class="h1-1">Flexbox Layout 연습</h1>
+                <nav>홈 공지사항 문의</nav>
+            </div>
+        </header>
+        <main>
+            <div class="flex">
+                <section>
+                    <h1>메인 콘텐츠</h1>
+                    <p>이 영역은 본문 내용을 표시하는 구역이다.<br>Flexbox를 이용해 왼쪽에 배치된다.</p>
+
+                </section>
+                <aside>
+
+                    <h1>사이드 바</h1>
+                    <p>보조정보나 공지사항을 표시하는 구역이다</p>
+
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Flex Layout Practice</p>
+        </footer>
+    </div>
+</body>
+
+</html>

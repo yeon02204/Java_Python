@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 실습 1
+        let month = 3;
+
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log(`${month}월은 31일까지 있습니다.`);
+                break;
+
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log(`${month}월은 30일까지 있습니다.`);
+                break;
+
+            case 2:
+                console.log(`${month}월은 28일 또는 29일까지 있습니다.`);
+                break;
+
+            default:
+                console.log("잘못된 월입니다. 1~12 사이의 숫자를 입력하세요.");
+        }
+        // 실습 2
+        score = 95;
+
+        if (score < 0 || score > 100) {
+            console.log("유효하지 않은 점수입니다")
+        } else if (score >= 90) {
+            console.log("A")
+        } else if (score >= 80) {
+            console.log("B")
+        } else if (score >= 70) {
+            console.log("C")
+        } else if (score >= 60) {
+            console.log("D")
+        } else {
+            console.log("F")
+        };
+
+        // 실습 3
+        let year = 2024;
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 == 0) {
+            console.log("윤년입니다")
+        } else {
+            console.log("평년입니다")
+        };
+
+        // 실습 4
+        let menu = 2;
+
+        switch (menu) {
+            case 1:
+                console.log("아메리카노 1500원")
+                break;
+            case 2:
+                console.log("라떼 2000원")
+                break;
+            case 3:
+                console.log("녹차 1800원")
+                break;
+            default:
+                console.log("잘못된 선택입니다")
+                break;
+        }
+
+        // 실습 5
+
+        let hour = 23; // 0~23 사이 숫자를 입력
+
+        switch (hour) {
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                console.log("좋은 아침 입니다")
+                break;
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                console.log("좋은 오후 입니다")
+                break;
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+                console.log("좋은 저녁 입니다")
+                break;
+            default:
+                console.log("좋은 밤 입니다")
+                break;
+
+        }
+
+        if (hour < 0 || hour > 23) {
+            console.log("유효하지 않은 시각입니다.");
+        } else if (hour >= 5 && hour <= 11) {
+            console.log("좋은 아침입니다.");
+        } else if (hour >= 12 && hour <= 17) {
+            console.log("좋은 오후입니다.");
+        } else if (hour >= 18 && hour <= 21) {
+            console.log("좋은 저녁입니다.");
+        } else {
+            console.log("좋은 밤입니다.");
+        }
+    </script>
+</body>
+
+</html>

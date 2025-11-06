@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priority</title>
+    <style>
+        /*우선순위가 같으면 나중에 선언한게 적용
+        우선순위가 다르면 높은 순서대로 적용*/
+        #p2{
+            color: green;
+        }
+        .p1{
+            color: blue !important;
+        }
+        /*!important 
+        우선순위를 싹 다 무시하고 무조건 적용*/
+        .p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1" id = "p2" style="color: aqua;">css 우선순위</p>
+</body>
+</html>

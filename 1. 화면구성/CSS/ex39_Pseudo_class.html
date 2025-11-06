@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo</title>
+    <style>
+        /* 아직 클릭하지 않은 링크 */
+        a:link{
+            color: red;
+        }
+        /* 누르면 색 바뀜 */
+        a:visited{
+            color: #9b59b6;
+        }
+        /* 커서 올리면 색 바뀜 */
+        a:hover{
+            text-decoration: none;
+            color: #e67e22;
+        }
+        /* 누르고 있을때(누르는 중)*/
+        a:active{
+            color: #e74c3c;
+        }
+
+        input:focus{
+            border: 2px solid #2ecc71;
+            outline: none;
+        }
+        /* :link -> visited -> hover -> active
+        순서로 작성해야 예측 가능한 동작이 된다*/
+    </style>
+</head>
+<body>
+    <h2>동적 의사 클래스</h2>
+    <a href="#">Example 링크</a><br><br>
+    <input type="text" placeholder="여기를 클릭">
+</body>
+</html>

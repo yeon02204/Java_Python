@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+        h1.shadow{
+            color: #555;
+            text-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+        }
+        /* rgba(빨간색, 녹색, 파란색, 투명도)
+        색깔은 0부터 255까지의 수, 투명도는 0.0에서 1.0 사이의 소수로 지정합니다.
+        투명도는 0에 가까울수록 투명해집니다. */
+        .title-glow{
+            color: white;
+            text-shadow: 
+                0 0 5px #00f, 
+                0 0 10px #0ff,
+                0 0 20px #0ff;
+        }
+        /* ㄴ--- #hex 코드*/
+
+        /*박스 쉐도우*/
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 40px auto ;
+            background: white;
+            border: 1px solid black;
+        }
+        .shadow1{
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="shadow">텍스트 그림자 예시</h1>
+    <h2 class="title-glow">네온느낌의 다중 그림자</h2>
+    <h1 class="title-glow"> 예쁘다</h1>
+    <div class="box shadow1"></div>
+</body>
+</html>
