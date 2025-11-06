@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 1부터 N까지 짝수,홀수 숫자 세기
+        let count1 = 0;
+        let count2 = 0;
+
+        for (let i = 1; i < 28; i++) {
+            if (i % 2 === 0) {
+                count1++;
+            } else {
+                count2++;
+            }
+        }
+        console.log(`짝수: ${count1}개 홀수: ${count2}개`); // 쩍수 : 13개 홀수 : 14개
+
+        // 2. 구구단에서 조건부 출력
+        let dan = 3;
+        for (let i = 1; i < 10; i++) {
+            if (i % 2 === 1) {
+                console.log(`${dan} X ${i} = ${dan * i}`)
+            }
+        }
+
+        // 3. 1부터 N까지 합계와 평균
+        let sum1 = 0;
+        let count3 = 0;
+        for (let i = 1; i < 46; i++) {
+            if (i % 3 !== 0) {
+                sum1 += i;
+                count3++;
+            }
+        }
+        console.log(`합계 : ${sum1} 평균 : ${sum1 / count3}`); 
+        // 혼자 푼게 틀림 ㅜㅠ
+        //0도 카운트 되서 틀린거였음!! let i = 0;을 let i =1; 로 바꿈
+
+        let n = 45; // 초기값
+        let sum2 = 0;
+        let count4 = 0;
+
+        for (let i = 1; i <= n; i++) {
+            if (i % 3 === 0) continue; // 3의 배수 제외
+            sum2 += i;
+            count4++;
+        }
+
+        let avg = sum2 / count4;
+
+        console.log("합계:", sum2);
+        console.log("평균:", avg);
+
+        // 자연수 뒤집기
+        let num = 12340; // 초기값
+        let reversed = 0;
+
+        while (num > 0) {
+            let digit = num % 10; // 마지막 자리
+            reversed = reversed * 10 + digit; // 뒤집기 누적
+            num = Math.floor(num / 10); // 한 자리 제거
+        }
+
+        console.log("뒤집은 숫자:", reversed);
+        // 어려움
+
+    </script>
+</body>
+
+</html>
