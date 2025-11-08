@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsDom</title>
+</head>
+<body>
+    <input type = "text">
+    <script>
+        // js로 input 태그를 선택
+        const input = document.querySelector('input[type = text]');
+
+        // input 태그가 value 라는 속성을 가지고 있지 않다면
+        if(!input.hasAttribute('value')){
+            // value 속성을 만들고 hello 라는 값을 넣어줘
+            input.setAttribute('value','hello');
+        }
+
+    </script>
+</body>
+</html>

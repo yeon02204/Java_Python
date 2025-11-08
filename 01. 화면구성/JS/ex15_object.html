@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>object</title>
 </head>
+
 <body>
     <script>
         // 객체 생성 방식
         // 1. 리터럴 방식
-        let person ={
+        let person = {
             // 객체 내부에 키 : 값으로 이루어진 프로퍼티를 작성한다.
-            name : "홍길동",
-            age : 25,
-            height : 128.4,
-            weight : 134
+            name: "홍길동",
+            age: 25,
+            height: 128.4,
+            weight: 134
         }
-        
+
         // 2. new Object() 생성자
         // 비어있는 객체를 생성
         let dog = new Object();
+
+        // 코리아 학생 객체
+        // 이름 나이 전화번호 듣는과목 수료여부
+
+        let koreaStudent = {
+            name: "신정연",
+            age: 24,
+            phoneNumber: "010-1234-5678",
+            subjects: ["JavaScript", "Java"],
+            completion: false
+        }
+        // 객체에 들어있는 값을 꺼내기
+        // 변수명.키
+        console.log(koreaStudent.name); // 신정연
+        // 변수명["키"]
+        console.log(koreaStudent["name"]); // 신정연
+
+        // 프로퍼티에 들어있는 velue를 수정하기
+        koreaStudent.name = "홍길동";
+        console.log(koreaStudent.name);
+
+        // 객체에 없는 프로퍼티도 추가할 수 있다
+        koreaStudent.height = 164.4;
+        console.log(koreaStudent.height); // 164.4
+        // 객체에서 프로퍼티 삭제하기
+        delete koreaStudent.height;
+        console.log(koreaStudent.height); // undefined
+
+        console.log(`이름 존재 여부 : ${'name' in koreaStudent}`); // 이름 존재 여부 : true
+
+        // for in
+        // 객체를 순회 하면서 모든 프로퍼티의 키를 변수에 담아서 준다
+        for (const k in koreaStudent) {
+            console.log(`key = ${k} / value = ${koreaStudent[k]}`)
+            // key = name / value = 홍길동
+            // key = age / value = 24
+            // key = phoneNumber / value = 010-1234-5678
+            // key = subjects / value = JavaScript,Java
+            // key = completion / value = false
+        }
+
+        // 생성자
+        // 객체를 생성하는 특수한 기능을 가진 함수
+        // 원래 함수 이름은 소문자로 시작
+        // 생성자는 대문자로 시작
+        // this : 생성자를 호출한 객체를 의미한다
+        function User(name, age) {
+            this.name = name; // 프로퍼티 = 지역변수(매개변수)
+            this.age = age;
+        }
+
+        // 생성자 사용
+        let u1 = new User("홍길동", 20); 
+
+        // 이름과 나이를 출력
+        console.log(`이름 ${u1.name} 나이 : ${u1.age}`); // 홍길동 20
+
+
     </script>
 </body>
+
 </html>

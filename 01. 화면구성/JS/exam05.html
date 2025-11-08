@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //학생의 이름(name), 나이(age), 전공(major)를
+        //속성으로 가지는 student 객체를 만들고
+        //콘솔에 각 값을 출력하세요
+
+        let student = {
+            name: "정연",
+            age: 24,
+            major: "소프트웨어공학"
+        }
+        console.log(student.name, student.age, student.major);
+
+
+
+        const car = {
+            brand: "Hyundai",
+            model: "Sonata"
+        };
+
+        //1. year 속성을 추가하여 값 2024 저장하기
+        car.year = 2024;
+        //2. model 속성을 'Avante'로 수정하기
+        car.model = "Avante";
+        console.log(car.brand, car.model, car.year);
+
+
+        const scores = { kor: 85, eng: 90, math: 78 };
+        //for - in을 사용하여 과목명과 점수를 다음 형식으로 출력하라
+
+        for (const k in scores) {
+            console.log(`${[k]} : ${scores[k]}`)
+        }
+        //kor : 85
+        //eng : 90
+        //math : 78
+
+
+        const users = [
+            { name: "kim", age: 20 },
+            { name: "lee", age: 25 },
+            { name: "park", age: 30 }
+        ]
+        //모든 사용자의 이름만 출력하기
+        //나이가 25세 이상인 사용자만 출력하기
+        // 모든 사용자의 평균 나이 구하기
+
+        for (const v of users) {
+            console.log(v.name);
+        }
+        for(const v of users){
+            if(v.age > 25){
+                console.log(v);
+            }
+        }
+
+        console.log(users.filter(x => x.age >=25));
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

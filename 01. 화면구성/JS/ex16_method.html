@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method</title>
+</head>
+
+<body>
+    <script>
+        // 메서드
+        // 객체 안에서 정의된 함수
+        // 다른 프로퍼티처럼 객체명. 메서드명()을 이용해 호출을 해야한다.
+
+        // 메서드 생성방법
+        let parson = {
+            name: "홍길동",
+            age: 20,
+            // introduce : function(){
+            //     console.log(`안녕하세요 저는 ${this.name}, 이고 ${this.age} 살 입니다`);
+            // }
+            // 축약형
+            introduce() {
+                console.log(`안녕하세요 저는 ${this.name}, 이고 ${this.age} 살 입니다`);
+            }
+        }
+        // 메서드를 사용하기위한 호출
+        parson.introduce();
+
+        // 메서드 안의 변수에서 this. 를 써야 하는 이유
+        // this 를 작성라하지 않으면 name과 age라는 변수를 찾는다
+        // 프로퍼티는 변수가 아니라서 name과 age라는 변수는 없다고 생각한다
+        // 호출한 객제 자신을 의미하는 this를 붙여줘야 name과 age가 프로퍼티의 값을 출력
+
+        const calc = {
+            add(x,y){console.log(x+y);},
+            sub(x,y){return x - y;}
+            // console.log를 sub 함수에 넣을려면 return을 빼고 
+            //console.log를 넣어야 한다 
+            // 이유 : 명령이 2개 일 수 없음
+            // sub(x,y){console.log(x - y);}
+        }
+        calc.add(10,20); // 30
+        console.log(calc.sub(10, 30)); // -20
+        // 아래도 바뀌어야 함
+        // calc.sub(10,30); // -20
+    </script>
+</body>
+
+</html>

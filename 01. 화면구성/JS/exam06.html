@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //사칙연산을 수행하는 calculator 객체 작성하기
+        //더하기, 빼기,곱하기,나누기
+        //덧셈 결과: 8
+        //뺄셈 결과: 2
+        //곱셈 결과: 15
+        //나눗셈 결과: 1.6666666666666667
+
+        const calculator = {
+            // 덧셈
+            add(a, b) {
+                const result = a + b;
+                console.log(`결과: ${result}`);
+            },
+
+            // 뺄셈
+            subtract(a, b) {
+                const result = a - b;
+                console.log(`결과: ${result}`);
+            },
+
+            // 곱셈
+            multiply(a, b) {
+                const result = a * b;
+                console.log(`결과: ${result}`);
+            },
+
+            // 나눗셈
+            divide(a, b) {
+                if (b === 0) {
+                    console.log("0으로 나눌 수 없습니다.");
+                } else {
+                    const result = a / b;
+                    console.log(`결과: ${result}`);
+                }
+            }
+        };
+
+        // 실행 예시
+        calculator.add(10, 5);
+        calculator.subtract(10, 5);
+        calculator.multiply(10, 5);
+        calculator.divide(10, 5);
+        calculator.divide(10, 0);
+
+
+        //-----------------------------------------------
+        //학생 이름과 점수를 관리하고 평균을 구하는 student 객체 만들기
+        //프로퍼티
+        //name
+        //scores -> 빈배열이 들어감
+
+        // function student(name, score) {
+        //     this.name = name;
+        //     this.scores = score;
+        // };
+        // 기능
+        // 점수 추가하는 기능
+        // 평균구하여 반환하는 기능
+        // 이름과 평균점수를 출력하는 기능
+
+        // const s1 = new student("이순신", 80);
+        // const s2 = new student("유관순", 95);
+        // const s3 = new student("정약용", 70);
+
+        const a = 100;
+        a = 50;
+
+        // console.log(s1);
+        // console.log(s1.scores);
+        // console.log(student.name);
+        //첫 시도 코드
+        // 평균을 구할려면 각 각의 점수를 빼와야함.. 어떻게 빼는지 모르갰음
+        // let 과 const의 차이도 모르겠고 어느상황에 누가 쓰이는지 모르겠음
+        // 에초에 이런식으로 접근하는게 맞는지도 모르겠음
+        // 이름과 평균 점수를 출력하려면 consle.log(`이름 : ${?} 평균점수 `) 
+        // 태희한테 배워옴
+
+        const student = {
+            name: "정연",
+            scores: [],
+            addScores(score) {
+                this.scores.push(score)  //이렇게 하면 scores [100, 50, 20] 식으로 추가됨
+            },
+            getAvg() {
+                let sum = 0;
+                for (let s of this.scores) {
+                    sum += s // 총합
+                }
+                return sum / this.scores.length; // 평균
+                // const total = this.scores.reduce((acc,cur)=> acc + cur, 0); // 총합
+                // return (totakl / this.Scores.length); // 평균
+            },
+            nameScoreReturn() {
+                return `학생의 이름은 ${name}이며 평균 점수는 ${this.getAvg()}입니다.`
+            }
+        }
+
+        student.addScores(90)
+        student.addScores(100)
+        student.addScores(70)
+        student.addScores(50)
+
+        console.log(student)
+        console.log(student.getAvg())
+        console.log(student.nameScoreReturn())
+
+
+
+        //-----------------------------------------------
+        // 상품을 담고 총합을 계산하는 cart 객체 작성하기
+        // 프로퍼티
+        // items -> 빈배열
+
+        // 기능
+        // 상품 추가하기(이름과 가격)
+
+        // 총 가격을 계산하여 반환하기
+
+        // 담긴 상품 목록(이름-가격) 출력하고 총가격 출력하기
+
+
+        const cart = {
+            items : [],
+            addItem(name,price){
+                this.items.push({name, price});
+            },
+            totalPrice(){
+                let total = 0;
+                for(let item of this.items){
+                    total += item.price;
+                }
+                return total;
+            },
+            showItems(){
+                console.log("담긴 상품");
+                this.items.forEach(item => {
+                    console.log(`${item.name} - ${item.price}원`)
+                });
+                console.log(`총합 : ${this.totalPrice()}원`)
+            }
+        }
+
+        cart.additem("마우스", 60000)
+        cart.additem("헤드셋", 100000)
+        cart.additem("가방", 15000)
+
+        cart.showItems();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

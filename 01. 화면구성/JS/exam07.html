@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 섭씨를 화씨로 변환하는 함수 `cTof` 를 작성하라 
+        // 요구사항은 입력값이 숫자가 아니면 `null`을 반환하라 
+        // (온도 * 1.8)+32
+
+        let cTof = c => (c * 1.8)+32;
+
+        console.log(`섭씨를 화씨로: ${cTof(21)}`);
+
+        // 2.배열의 평균을 구하는 함수를 작성하라 
+        //  빈 배열이면 0을 반환하라
+
+        function arrayAvg(arr){
+            if(Array.isArray(arr)|| arr.length === 0){
+                return 0;
+            }
+            return arr.reduce((arr, cur) => acc + cur ,0)/ arr.length;
+        }
+        // 3. 나머지 연산을 사용해 짝수인지 판별하는 함수를 작성하라
+        const isEven = (n) => typeof n === 'number' && n % 2 === 0;
+    </script>
+</body>
+
+</html>
