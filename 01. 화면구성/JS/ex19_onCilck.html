@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onCilck</title>
+    <style>
+        .box-add{
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        // 함수를 만든다
+        // 함수 : 특정한 기능이 있는 코드의 묶음
+        function myFunction(/* 받아야 하는 값이 있다면 매개변수를 선언*/) {
+            // 코드 블럭 안에 명령을  정의한다
+            alert("버튼이 클릭 되었습니다.");
+        }
+        // ------------------------------------------------------------
+        let f = function (/* 받아야 하는 값이 있다면 매개변수를 선언*/) {
+            alert("버튼이 클릭 되었습니다.");
+        }
+        // ------------------------------------------------------------
+        let al = (/* 받아야 하는 값이 있다면 매개변수를 선언*/) => alert("버튼이 클릭 되었습니다.");
+        // ------------------------------------------------------------
+
+        // input 태그에 글을 적으면 p태그에 나타나는 기능 만들기
+        let showText = (value) => {
+            // 1. p태그를 js가 선택을 해야함
+            let result = document.querySelector("#result");
+            // input 태그에 적힌 내용을 읽어와야함
+            // innerText : 요소의 보이는 텍스트를 반환하거나 설정한다.
+            // "<b>안녕</b>" 자체가 나옴
+            // innerHTML : 태그가 있으면 반영이 되서 나온다. 
+            // "<b>안녕</b>"-> 안녕이 굵게 나옴
+            // scirpt가 작성될 가능성이 있기 때문에(xss공격) 사용할때 주의 해야함
+            result.innerText = value;
+        }
+        // 버튼을 누르면 box의 색을 바꾸는 changeColor() 만들기
+        let changeColor = () => {
+            let change = document.querySelector("#box");
+            change.style.backgroundColor = "pink";
+            // 현재 인라인에 배경색이 설정되어 있기 떄문에 classList로 주게되면 css 적용 우선순위에 밀려서 적용이 안될 수 있다.
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <button onclick="myFunction()">클릭</button>
+    <button onclick="f()">클릭</button>
+    <button onclick="al()">클릭</button>
+    <hr> <!--구분선-->
+    <input type="text" oninput="showText(this.value)" placeholder="입력하세요.">
+    <p id="result"></p>
+    <hr>
+    <div id="box" class="box-add" style="
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 10px;"> </div>
+    <button onclick="changeColor()">색 바꾸기</button>
+</body>
+</html>

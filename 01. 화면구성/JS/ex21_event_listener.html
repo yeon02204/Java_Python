@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="myButton">클릭</button>
+    <script>
+
+        let button = document.querySelector("#myButton");
+        // addEventListener : 브라우저에서의 이벤트를 처리하기위해 요소에 이벤트 리스너를 붙이는 표준방법이다.
+        // 리스너(핸들러) : 이벤트가 일어났을 때 그에 반응해서 실행되는 함수(기능)
+        // 등록 : 요소(elemernt)에 리스너를 붙이는 행위
+        // addEventListener(이벤트, 기능) 
+        button.addEventListener("click", function () {
+            alert("버튼이 클릭되었습니다.")
+        })
+        // 화살표 함수
+        button.addEventListener("click", () => alert("버튼이 클릭되었습니다."))
+
+        // 이벤트의 종류
+        // click, dbclick, mouseup, mouseremove, mouseenter, mouseleave, keydown, keyup
+        // input, change, submit, focus, blur    
+    </script>
+    <hr>
+    <input type="button" id="target1" value="button1">
+    <input type="button" id="target2" value="button2">
+
+    <script>
+        // 버튼 2개 선택하기
+        let t1 = document.querySelector("#target1");
+        let t2 = document.querySelector("#target2");
+
+        // 매개변수에 들어오는 내용
+        // 이벤트가 일어난 요소
+        function btn_listner(event) {
+            // event.target.id : 이벤트가 일어난 타겟의 id
+            switch (event.target.id) {
+                case 'taget1':
+                    alert(1);
+                    break;
+                case 'taget2':
+                    alert(2);
+                    break;
+            }
+        }
+
+        // 원래는 함수를 호출할때 함수명()을 하는게 ㅁ자는데
+        // 이벤트리스너에서 함수를 호출할떄는 ()를 안붙인다
+        t1.addEventListener("click",btn_listner);
+        t2.addEventListener("click",btn_listner);
+    </script>
+</body>
+
+</html>

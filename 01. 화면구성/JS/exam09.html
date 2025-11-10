@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display:flex;
+            gap : 10px;
+            list-style : none;
+        }
+    </style>
+    <script>
+        
+        function calc(op){
+            //document.querySelector("#su1").value;
+            //input태그에 들어있는 value를 읽어오면 무조건 문자열
+            let su1 = Number(document.querySelector("#su1").value);
+            let su2 = Number(document.querySelector("#su2").value);
+            let result = document.querySelector("#result");
+            switch(op){
+                case '+':
+                    result.value = su1 + su2;
+                    break;
+                case '-':
+                    result.value = su1 - su2;
+                    break;
+                case '*':
+                    result.value = su1 * su2;
+                    break;
+                case '/':
+                    result.value = su1 / su2;
+                    break;
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    <table border="1">
+        <!-- <tr> : 하나의 행 -->
+        <tr>
+            <th>수1</th>
+            <td><input id="su1"></td>
+        </tr>
+        <tr>
+            <th>수2</th>
+            <td><input id="su2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <ul>
+                    <li><input 
+                            type="button" 
+                            id="plus" 
+                            value="+" 
+                            onclick="calc('+')">
+                    </li>
+                    <li><input 
+                            type="button" 
+                            id="minus" 
+                            value="-"
+                            onclick="calc('-')">
+                    </li>
+                    <li><input 
+                            type="button" 
+                            id="multi" 
+                            value="*"
+                            onclick="calc('*')">
+                    </li>
+                    <li><input 
+                            type="button" 
+                            id="div" 
+                            value="/"
+                            onclick="calc('/')">
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>결과</th>
+            <td><input id="result"></td>
+        </tr>
+    </table>
+</body>
+</html>

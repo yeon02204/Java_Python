@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--버튼을 누를 때마다 숫자가 증가하는 카운터 만들기-->
+    <button id = "btnPlus">증가시키기</button>
+    <button id = "btnMinus">감소시키기</button>
+    <p id="result">0</p>
+
+    <script>
+        let btn = document.querySelector("#btnPlus");
+        let btn2 = document.querySelector("#btnMinus");
+        let counter = document.querySelector("#result");
+
+        let count = 0;
+        btn.addEventListener("click",()=>{counter.innerText = ++count;});
+        btn2.addEventListener("click",()=>{counter.innerText = --count;});
+        
+    </script>
+</body>
+</html>
