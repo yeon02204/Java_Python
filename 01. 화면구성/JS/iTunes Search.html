@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<body>
+  <h2>🎵 음악 검색 (iTunes API)</h2>
+
+  <!-- 1. 검색어 입력창 -->
+  <input id="search" placeholder="검색어 입력 (예: BTS)">
+  <!-- 2. 검색 버튼 -->
+  <button id="btn">검색</button>
+  <!-- 3. 검색 결과를 넣을 ul -->
+  <ul id="result"></ul>
+
+  <script>
+    // 검색어 입력창 요소
+    const search = document.querySelector("#search");
+    // 검색 버튼 요소
+    const search_btn = document.querySelector("#btn");
+    // 결과를 표시할 ul 요소
+    const result = document.querySelector("#result");
+
+    // 검색 버튼을 눌렀을 때 실행할 함수
+    let searchIn = () => {
+      // 1) input에 적힌 검색어를 가져온다 (문자열)
+      const keyword = search.value.trim();  // 예: "BTS", "아이유"
+
+      // 검색어가 비어있으면 그냥 종료 (API 안 불러감)
+      if (!keyword) {
+        console.log("검색어 없음");
+        return;
+      }
+
+      // 2) 검색어를 URL에 끼워 넣기 위해 인코딩한다
+      //    한글, 공백 같은 걸 URL에서 안전하게 쓰게 바꿔줌
+      const encoded = encodeURIComponent(keyword);
+
+      // 3) 최종 요청 보낼 URL을 만든다
+      //    template literal (백틱 + ${변수}) 사용
+      const searchUrl =
+        `https://itunes.apple.com/search?term=${encoded}&entity=song&limit=5`;
+
+      // 4) fetch로 iTunes API에 요청 보내기
+      fetch(searchUrl)
+        // 응답(response) 객체 받는 then
+        .then(response => {
+          console.log("response:", response);
+
+          // 응답 상태 코드가 200대가 아니면 (성공이 아니면) 에러 던지기
+          if (!response.ok) {
+            throw new Error("검색 실패");
+          }
+
+          // 응답 바디를 JSON으로 파싱 (이것도 Promise라서 return)
+          return response.json();
+        })
+        // JSON 파싱이 끝난 후 실제 데이터(data)를 받는 then
+        .then(data => {
+          console.log("data:", data);
+
+          // 5) 이전 검색 결과를 지워준다 (새 검색 결과로 덮어쓰기 위해)
+          result.innerHTML = "";
+
+          // data.results가 없거나, 길이가 0이면 → 검색 결과 없음
+          if (!data.results || data.results.length === 0) {
+            const li = document.createElement("li");
+            li.textContent = "검색 결과 없음";
+            result.appendChild(li);
+            return;  // 여기서 함수 종료
+          }
+
+          // 6) 결과가 있을 때: 각 노래 정보를 li로 만들어서 ul에 추가
+          data.results.forEach(item => {
+            // item: 각 노래 정보 객체 하나
+            // 예: { artistName: "BTS", trackName: "Dynamite", ... }
+
+            const li = document.createElement("li");
+
+            // "가수 - 노래제목" 형태로 텍스트 넣기
+            li.textContent = `${item.artistName} - ${item.trackName}`;
+
+            // 만든 li를 ul(#result) 안에 붙이기
+            result.appendChild(li);
+          });
+        })
+        // 7) fetch, 응답 처리, JSON 파싱 중 에러가 나면 여기로 옴
+        .catch(error => {
+          console.log("fail:", error);
+        });
+    };
+
+    // 8) 검색 버튼이 클릭될 때마다 searchIn 함수를 실행하도록 이벤트 등록
+    search_btn.addEventListener("click", searchIn);
+  </script>
+</body>
+</html>

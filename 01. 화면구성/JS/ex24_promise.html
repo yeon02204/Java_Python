@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 데이터 요청을 한다고 가정 -->
+    <button id="load">데이터 요청</button>
+
+
+    <script>
+        //promise객체
+        //비동기 작업의 최종 완료 결과값(성공 또는 실패)를 표현하는 객체
+
+        //promise의 상태
+        //pending : 대기중
+        //fulfilled : 성공(resolve 호출)
+        //rejected : 실패(reject 호출)
+        document.querySelector("#load").addEventListener("click",() => {
+            let myPromise = new Promise((resolve,reject) =>{
+                 let success = Math.random() > 0.5; //50%확률로 성공 또는 실패
+                 setTimeout(() => {
+                    if(success){
+                        resolve("데이터 가져오기 성공");
+                    } else {
+                        reject("데이터 가져오기 실패")
+                    }
+                 },1500); //1.5초 뒤 결과를 반환
+            })
+
+            //Promise의 사용 (.then / .catch)
+            myPromise
+                .then((message) => {
+                    console.log(message);
+                })
+                .catch((message) => {
+                    console.log(message);
+                })
+
+
+        })
+        
+    </script>
+</body>
+</html>

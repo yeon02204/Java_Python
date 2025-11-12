@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>명언 제조기</h1>
+    <p id="advice" style="background-color: pink;"></p>
+    <button id="adviceBtn">명언 생성</button>
+
+    <script>
+        const advice = document.querySelector("#advice");
+        const adviceBtn = document.querySelector("#adviceBtn");
+        const advice_URL = "https://api.adviceslip.com/advice";
+
+        
+
+        let adviceIn= () =>{
+            fetch(advice_URL)
+
+            .then(response => {
+                console.log("response:",response);
+                return response.json();
+            })
+            .then( data =>{
+                console.log(data);
+                advice.textContent = data.slip.advice; 
+            })
+            .catch(fail => {
+                console.log("fail:",fail)
+            });
+
+            
+        };
+        adviceBtn.addEventListener("click", adviceIn);
+    
+    </script>
+</body>
+</html>

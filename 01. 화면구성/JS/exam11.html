@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex;">
+        <button id = "back" onclick="prev();">이전</button>
+        <img alt="갤러리" id="gallery"
+        style="width: 300px;"
+        src="../images (2)/dog1.jpg">
+        <button id = "next"onclick="next();">다음</button>
+    </div>
+    <script>
+        
+        // 다음버튼 선택
+        let next_btn = document.querySelector("#next");
+        // 이전버층 선택
+        let back_btn = document.querySelector("#back")
+
+        let num = 1;
+        let path = `../images (2)/dog${num}.jpg`;
+        let prev = () => {
+            num--;
+            if(num < 1){
+                num = 7;
+            }
+            let path = `../images (2)/dog${num}.jpg`;
+            let gallery = document.querySelector("#gallery");
+        gallery.src = path;
+        };
+        let next = () => {
+            num++;
+            if(num > 7){
+                num = 1;
+            }
+            let path = `../images (2)/dog${num}.jpg`;
+            // gallery라는 아이디 값을 가진 이미지 테그의 src를 변경
+            // 갤러리 선택
+        let gallery = document.querySelector("#gallery");
+        gallery.src = path;
+        };
+
+        setInterval(next,2000);
+
+    </script>
+</body>
+</html>

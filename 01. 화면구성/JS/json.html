@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>이름 :</label>
+    <input type ="text" id = "nameInput"><br>
+    <label>나이 :</label>
+    <input type ="text" id = "ageInput"><br>
+    <button onclick="addUser()">Json에 추가하기</button>
+    <script>
+        const users = [];
+
+        let addUser = () => {
+
+            // <input>,<textarea>,<slelet>만 value프로퍼티를 통해 값을 가져올 수 있다
+            let name = document.querySelector("#nameInput").value;
+            let age = document.querySelector("#ageInput").value;
+            
+            // 입력한 값으로 json 객체를 생성
+            let newUser = {
+                "name" : name,
+                "age" : age
+            }
+            users.push(newUser);
+
+            // 서버로 보내기
+            console.log(users);
+        }
+    </script>
+</body>
+</html>

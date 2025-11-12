@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img id="dogImg" style="width: 400px;
+        ;
+        border: 1px solid black;">
+    <button id="bringBtn" style="
+    position: fixed;   /* 화면에 고정 */
+    right: 20px;       /* 오른쪽에서 20px 떨어짐 */
+    bottom: 20px;      /* 아래에서 20px 떨어짐 */
+    padding: 10px 16px;">가져오기</button>
+
+    <script>
+
+        // 이미지
+        const dogImg = document.querySelector("#dogImg");
+        // 가져오기 버튼
+        const bringBtn = document.querySelector("#bringBtn");
+        const DOG_URL = "https://dog.ceo/api/breeds/image/random";
+
+        // url 에서 불러오기 성공여부
+        let bringIn = () => {
+            fetch(DOG_URL)
+
+                .then(response => {
+                    console.log("response :", response);
+                    return response.json(); // json으로 꺼내기
+
+                })
+                .then(data => {
+                    console.log("data:", data);
+                    // 여기서 이미지 src 바꾸기
+                    dogImg.src = data.message;
+                })
+
+                .catch(fail => {
+                    console.log("fail:", fail);
+                })
+        };
+
+
+        bringBtn.addEventListener("click", bringIn);
+
+
+
+
+    </script>
+</body>
+
+</html>
