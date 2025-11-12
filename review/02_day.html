@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_day</title>
+</head>
+
+<body>
+    <script>
+        // exam 1-1
+        let ball = 25;
+        let inBox = 4;
+        // 몫 = (공 전체 갯수 - (전체 % 용량)) / 용량
+        // 몫 = (25 - (나머지 1)) / 4 = 6
+        // 박스 갯수 = 몫 + 나머지가 1이면 1, 0이면 0 을 더함 
+        // 박스 갯수 = 6 + 1 = 7
+        let box = (ball - (ball % inBox)) / inBox;
+        let boxes = box + (ball % inBox ? 1 : 0);
+        console.log(`박스 갯수 : ${boxes}`); // 박스 갯수 : 7
+
+        // exam 1-2
+        let age = 27;
+        let ticketPrice = 12000;
+
+        let ticke = (age > 19) ? ticketPrice * 0.8 : ticketPrice;
+
+        // exam 1-3
+        let isVip = true;
+        let price = 25000;
+
+        let free = (isVip === true) || price >= 30000 ? console.log("무료배송") : console.log("유료배송");
+
+        // exam 1-4
+        let onDo = 23;
+
+        let toDay = (onDo >= 28) ? "에어컨 작동" : (onDo <= 18) ? "난방작동" : "대기상태";
+
+        // emam2-1
+        let month = 11;
+
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: {
+                console.log(`${month}월은 31일까지 있습니다`);
+                break;
+            }
+            case 4:
+            case 6:
+            case 9:
+            case 11: {
+                console.log(`${month}월은 30일까지 있습니다`);
+                break;
+            }
+            case 2: {
+                console.log(`${month}월은 28일 또는 29일까지 있습니다`);
+                break;
+            }
+            default:
+                console.log("잘못된 월입니다. 1~12 사이의 숫자를 입력하세요.");
+        }
+
+        // exam2-2
+        let score = 77;
+
+        if (score < 0 || score > 100) {
+            console.log("유효하지 않은 점수 입니다.")
+        }
+        else if (score >= 90) {
+            console.log("A등급 입니다.");
+        } else if (score >= 80) {
+            console.log("B등급 입니다.");
+        } else if (score >= 70) {
+            console.log("C등급 입니다.");
+        } else if (score >= 60) {
+            console.log("D등급 입니다.");
+        } else if (60 > score) {
+            console.log("F등급 입니다.");
+        };
+
+        // exam2-3
+        let year = 100;
+
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            console.log(`${year}년도는 윤년입니다.`)
+        } else {
+            console.log(`${year}년도는 평년입니다.`)
+        }
+
+        // exam2-4
+
+        let menu = 3;
+
+        switch (menu) {
+            case 1:
+                console.log("아메리카노 1500원");
+                break;
+
+            case 2:
+                console.log("카페라떼 2000원");
+                break;
+
+            case 3:
+                console.log("녹차 1800원");
+                break;
+
+            default:
+                console.log("메뉴가 존재하지 않습니다.")
+        }
+
+        // exam 2-5
+
+        let hour = 17;
+
+        if (0 > hour > 25) {
+            console.log("존재하지 않는 시간입니다.")
+        } else if (5 <= hour <= 11) {
+            console.log("좋은 아침 입니다.")
+        } else if (12 <= hour <= 17) {
+            console.log("좋은 오후입니다.")
+        } else if (18 <= hour <= 20) {
+            console.log("좋은 저녁입니다")
+        } else {
+            console.log("좋은 밤 입니다..")
+        }
+
+        // exam 3-1
+        let n = 45;
+        let odd = 0;
+        let even = 0;
+
+        for (let i = 1; i <= n; i++) {
+            if (i % 2 === 0) {
+                even++;
+            }
+            else{
+                odd++;
+            }
+        };
+        console.log(`짝수 : ${even}개 홀수 : ${odd}개`);
+        // exam 3-2
+        // exam 3-3
+        // exam 3-4
+        // exam 3-5
+
+        // exam 4-1
+
+        let arr = [1,2,3,4,5,6,7,8,9,10];
+
+        let array = arr.filter( v % 2 === 0).map(v * 2);
+
+        console.log(array);
+        // exam 4-2
+
+        let sum = 0; 
+        for(let i = 0; i < arr.length; i++ ){
+            sum += arr[i];
+        }
+        let avg = sum / arr.length;
+        console.log(avg); //
+
+        // exam 4-3
+        let sum1 = 0;
+
+        for(let i = 0; i < arr.length; i++ ){
+            sum1 += arr[i];
+        }
+        console.log(sum1); // 55
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
